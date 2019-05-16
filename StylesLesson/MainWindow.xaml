@@ -1,0 +1,38 @@
+﻿<Window x:Class="StylesLesson.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StylesLesson"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary Source="LightTheme.xaml"/>
+    </Window.Resources>
+    <Grid x:Name="styleGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="215*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="379*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Список ваших контактов" Grid.Column="0" Grid.Row="0" Margin="0,0,0,1"/>
+        <ComboBox Name="contactsComboBox" Grid.Column="0" Grid.Row="1" Margin="0,0,0,358"/>
+        <Border CornerRadius="10">
+            <Button Click="ChangeTheme" Content="Сменить тему" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="322,191,-335,-203" Grid.Row="1" Width="162" Height="43"/>
+        </Border>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="-64,127,0,0" VerticalAlignment="Top" Width="424" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Label Content="Ne Telegram" FontSize="20" Grid.Column="1" HorizontalAlignment="Left" Margin="521,-1,0,0" VerticalAlignment="Top" Height="43" Width="122" RenderTransformOrigin="0.888,0.452" Grid.RowSpan="2"/>
+    </Grid>
+</Window>
