@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <ResourceDictionary Source="LightTheme.xaml"/>
+        <ResourceDictionary x:Name="resourceDictionary" Source="LightTheme.xaml"/>
     </Window.Resources>
     <Grid x:Name="styleGrid">
         <Grid.ColumnDefinitions>

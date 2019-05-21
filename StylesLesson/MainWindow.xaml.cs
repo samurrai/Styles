@@ -21,6 +21,7 @@ namespace StylesLesson
     public partial class MainWindow : Window
     {
         private string _currentThemeUri = "LightTheme.xaml";
+
         public MainWindow()
         {   
             InitializeComponent();
@@ -46,10 +47,12 @@ namespace StylesLesson
             {
                 _currentThemeUri = "LightTheme.xaml";
             }
-            Uri uri = new Uri(_currentThemeUri, UriKind.Relative);
-            ResourceDictionary resourceDictionary = Application.LoadComponent(uri) as ResourceDictionary;
-            //Application.Current.Resources.Clear();
-            Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+            //Uri uri = new Uri(_currentThemeUri, UriKind.Relative);
+            //ResourceDictionary resourceDictionary = Application.LoadComponent(uri) as ResourceDictionary;
+            ////Application.Current.Resources.Clear();
+            //Application.Current.Resources.MergedDictionaries.Add(resourceDictionary);
+
+            resourceDictionary.Source = new Uri(_currentThemeUri, UriKind.Relative);
         }
     }
 }
